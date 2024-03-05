@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Toast
 import com.fabioseyiji.projetohavagas.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 adicionarCelularCb.isChecked = false
                 celularLl.visibility = View.GONE
                 celularEt.text.clear()
-                femininoBt.isChecked = true
+                femininoRb.isChecked = true
                 dataNascEt.text.clear()
                 formacaoSp.setSelection(0)
                 anoConclusaoEt.text.clear()
@@ -65,6 +66,42 @@ class MainActivity : AppCompatActivity() {
                 monografiaEt.text.clear()
                 orientadorEt.text.clear()
                 vagasEt.text.clear()
+            }
+        }
+
+        with(amb){
+            salvarBt.setOnClickListener{
+                val mensagem = buildString {
+                    append("Nome completo: ${nomeEt.text}\n")
+                    append("Email: ${emailEt.text}\n")
+                    append("Cadastrado na lista de emails: ${if (emailCb.isChecked) "Sim" else "Não"}\n")
+                    append("Telefone: ${telefoneEt.text}\n")
+                    append("Tipo de telefone: ${if (comercial.isChecked) "Comercial" else "Residencial"}\n")
+
+                    if (adicionarCelularCb.isChecked) {
+                        append("Celular: ${celularEt.text}\n")
+                    }
+
+                    append("Sexo: ${if (masculinoRb.isChecked) "Masculino" else "Feminino"}\n")
+                    append("Data de nascimento: ${dataNascEt.text}\n")
+                    append("Formação: ${formacaoSp.selectedItem}\n")
+
+                    when (formacaoSp.selectedItemPosition) {
+                        in 0..3 -> append("Ano de conclusão: ${anoConclusaoEt.text}\n")
+                        in 4..5 -> {
+                            append("Ano de conclusão: ${anoConclusaoEt.text}\n")
+                            append("Instituição: ${instituicaoEt.text}\n")
+                            if (formacaoSp.selectedItemPosition == 5) {
+                                append("Título de monografia: ${monografiaEt.text}\n")
+                                append("Orientador: ${orientadorEt.text}\n")
+                            }
+                        }
+                    }
+
+                    append("Vagas de interesse: ${vagasEt.text}")
+                }
+
+                Toast.makeText(this@MainActivity, mensagem, Toast.LENGTH_LONG).show()
             }
         }
     }
