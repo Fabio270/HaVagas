@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">ProjetoHaVagas</string>
+    <string name="h_vagas">HáVagas</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="nome_completo_title">Nome Completo:</string>
+    <string name="nome_completo_label">Nome Completo:</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone_template">(00)00000–0000</string>
+    <string name="email_list">Deseja receber nossos e-mails e atualizações?</string>
+    <string name="residencial">Residencial</string>
+    <string name="comercial">Comercial</string>
+    <string name="adicionar_celular">Adicionar Celular?</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="data_de_nascimento">Data de Nascimento:</string>
+    <string name="_10_10_2010">10/10/2010</string>
+    <string name="formacao">Formação: </string>
+    <string name="ano_conclusao">Ano de Conclusão:</string>
+    <string name="instituicao">Instituição:</string>
+    <string name="t_tulo_da_monografia">Título da Monografia:</string>
+    <string name="orientador">Orientador:</string>
+    <string name="vagas">Vagas de Interesse</string>
+    <string name="salvar">SALVAR</string>
+    <string name="limpar">LIMPAR</string>
+    <string name="vagas_de_interesse">Vagas de Interesse</string>
+    <string-array name="listformacao">
+        <item name="default">Escolha sua Formação</item>
+        <item name="fundamental">Fundamental</item>
+        <item name="medio">Médio</item>
+        <item name="graduacao">Graduação</item>
+        <item name="especializacao">Especialização</item>
+        <item name="mestrado">Mestrado</item>
+        <item name="doutorado">Doutorado</item>
+    </string-array>
 </resources>
