@@ -14,10 +14,6 @@ class MainActivity : AppCompatActivity() {
         amb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(amb.root)
 
-        amb.mainTb.apply {
-            setSupportActionBar(this)
-        }
-
         with(amb) {
             adicionarCelularCb.setOnClickListener {
                 if (adicionarCelularCb.isChecked) celularLl.visibility = View.VISIBLE
@@ -49,6 +45,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+        with(amb){
+            limparBt.setOnClickListener {
+                nomeEt.text.clear()
+                emailEt.text.clear()
+                emailCb.isChecked = false
+                telefoneEt.text.clear()
+                telefoneRg.clearCheck()
+                adicionarCelularCb.isChecked = false
+                celularLl.visibility = View.GONE
+                celularEt.text.clear()
+                femininoBt.isChecked = true
+                dataNascEt.text.clear()
+                formacaoSp.setSelection(0)
+                anoConclusaoEt.text.clear()
+                gradEspecializacaoLl.visibility = View.GONE
+                instituicaoEt.text.clear()
+                mestradoDoutoradoLl.visibility = View.GONE
+                monografiaEt.text.clear()
+                orientadorEt.text.clear()
+                vagasEt.text.clear()
+            }
+        }
     }
 }

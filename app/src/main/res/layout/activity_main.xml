@@ -164,13 +164,13 @@
             app:layout_constraintTop_toBottomOf="@id/celularLl">
 
             <RadioButton
-                android:id="@+id/masculino"
+                android:id="@+id/masculinoBt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/masculino" />
 
             <RadioButton
-                android:id="@+id/feminino"
+                android:id="@+id/femininoBt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
